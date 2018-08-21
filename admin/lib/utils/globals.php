@@ -28,6 +28,12 @@
       $ip = $match[1];
     }elseif (preg_match('/inet addr:(10\.\d+\.\d+\.\d+)/',$line,$match)) {
       $ip = $match[1];
+    }elseif (preg_match('/inet (192\.\d+\.\d+\.\d+)/',$line,$match)) {
+      $ip = $match[1];
+    }elseif (preg_match('/inet (172\.\d+\.\d+\.\d+)/',$line,$match)) {
+      $ip = $match[1];
+    }elseif (preg_match('/inet (10\.\d+\.\d+\.\d+)/',$line,$match)) {
+      $ip = $match[1];
     }
   }
   if (isset($ip)) {
